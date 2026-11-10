@@ -1,5 +1,9 @@
 # Salla technical review acceptance — 10 November 2026
 
+## Hosted deployment completed — source c2080a3
+
+Owner subsequently authorized the remote release. A migration dry run found only 202611100001; it was applied through the migration CLI with no seeds or role inventory updates. Read-only live verification confirms its history record, the decision-row lock, denied anon/authenticated execution and allowed service_role execution. Deployed return-decide **v26** and salla-order-lookup **v32** are ACTIVE. Live method guards returned 405, tampered verification returned 401/invalid_return_token, and malformed lookup returned 400. These smoke checks create no tenant/case/order and send no messages or shipments. The earlier pending/local statements below describe the sequence before this completed deployment. Real provider/customer journey and reviewer acceptance remain separate.
+
 Release update: owner authorized committing and pushing these source changes to main. The new return-decide handler and migration 202611100001 still require separate Supabase deployment/application; a frontend Git release does not complete those steps. Earlier local/uncommitted statements below describe the acceptance stage.
 
 Scope: owner-authorized read-only testing of the connected Salla Test workspace and public app 1155852112. No merchant messages, orders, shipping bookings, funds or policy approvals were created. Connection evidence from 9 November is separate from these API checks.
